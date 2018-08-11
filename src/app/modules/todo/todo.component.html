@@ -1,0 +1,19 @@
+
+
+<section class="todo-area">
+    <div class="todo-inner">
+        <input type="text" class="todo-input" [(ngModel)]="newTodo.label" (keyup.enter)="addTodo()" placeholder="Type anything!">
+
+        <ul class="todo-list">
+            <li *ngFor="let todo of todoList">
+                <div class="label">{{todo.label}}</div>
+
+                <div class="tools">
+                    <button type="button" class="btn btn-del" (click)="deleteTodo(todo)">-</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</section>
+
