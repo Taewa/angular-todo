@@ -29,9 +29,20 @@
             padding: 10px;
             border-bottom: 1px solid #eee;
             animation: listShow 0.5s;
+            
+            &.completed {
+                .label {
+                    color: #ddd;
+                    text-decoration: line-through;
+                }
+            }
 
             &:last-child {
                 border-bottom: none;
+            }
+
+            .complete {
+                margin-right: 8px;
             }
 
             .label {

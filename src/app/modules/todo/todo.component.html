@@ -5,7 +5,12 @@
         <input type="text" class="todo-input" [(ngModel)]="newTodo.label" (keyup.enter)="addTodo()" placeholder="Type anything!">
 
         <ul class="todo-list">
-            <li *ngFor="let todo of todoList">
+            <li *ngFor="let todo of todoList" [ngClass]="{'completed' : todo.isCompleted}">
+
+                <div class="complete">
+                    <input type="checkbox" [checked]="todo.isCompleted" (change)="todoCompleted(todo)">
+                </div>
+
                 <div class="label">{{todo.label}}</div>
 
                 <div class="tools">

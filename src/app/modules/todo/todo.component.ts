@@ -31,6 +31,10 @@ export class TodoComponent implements OnInit {
         this.todoService.deleteTodo(todo.id);
     }
 
+    todoCompleted(todo: Todo) {
+        this.todoService.CompleteTodo(todo);
+    }
+
 
 
 }

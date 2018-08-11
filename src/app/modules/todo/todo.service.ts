@@ -23,4 +23,15 @@ export class TodoService {
     deleteTodo(id: number): void {
         this.todoList = this.todoList.filter(todo => todo.id !== id);
     }
+
+    CompleteTodo(todo: Todo): void {
+        this.todoList.forEach((item) => {
+            if (item.id === todo.id) {
+                item.isCompleted = !todo.isCompleted;
+
+                console.log('item.isCompleted', item.isCompleted);
+
+            }
+        });
+    }
 }
