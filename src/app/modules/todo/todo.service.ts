@@ -28,9 +28,6 @@ export class TodoService {
         this.todoList.forEach((item) => {
             if (item.id === todo.id) {
                 item.isCompleted = !todo.isCompleted;
-
-                console.log('item.isCompleted', item.isCompleted);
-
             }
         });
     }
